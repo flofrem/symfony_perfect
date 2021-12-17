@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admintype</title>
+</head>
+<body>
+    {{ form_start(typeForm)}}
+
+    {{form_label(typeForm.name,'nom du type :', {'label.attr': {'class':'label'}})}}
+    {{form_widget(typeForm.name, { 'att' : {'placeholder' : 'nom du type ', 'class':'name'}})}}
+
+    {{form_label(typeForm.description,'description du type  :', {'label.attr': {'class':'label'}})}}
+    {{form_widget(typeForm.description, { 'att' : {'placeholder' : 'description du type '}})}}
+
+   
+    {{form_widget(typeForm.submit, { 'att' : {'label' : 'Enregistrer'}})}}
+
+    {{ form_end(typeForm) }}
+
+</body>
+</html>

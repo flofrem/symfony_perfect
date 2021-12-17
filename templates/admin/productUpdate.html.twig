@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adminproduit</title>
+</head>
+<body>
+    {{ form_start(productForm)}}
+
+    {{form_label(productForm.name,'nom de l\'article :', {'label.attr': {'class':'label'}})}}
+    {{form_widget(productForm.name, { 'att' : {'placeholder' : 'nom de l\'article ', 'class':'name'}})}}
+
+    {{form_label(productForm.description,'description de l\'article  :', {'label.attr': {'class':'label'}})}}
+    {{form_widget(productForm.description, { 'att' : {'placeholder' : 'description de l\'article '}})}}
+
+    {{form_label(productForm.Price,'prix de l\'article :', {'label.attr': {'class':'label'}})}}
+    {{form_widget(productForm.Price, { 'att' : {'placeholder' : 'prix de l\'article '}})}}
+
+    {{form_label(productForm.Stock,'stock initial :', {'label.attr': {'class':'label'}})}}
+    {{form_widget(productForm.Stock, { 'att' : {'placeholder' : 'stock initial '}})}}
+
+    {{form_label(productForm.type,'désignation de l\'article :', {'label.attr': {'class':'label'}})}}
+    {{form_widget(productForm.type, { 'att' : {'placeholder' : 'désignation de l\'article '}})}}
+    
+    {{form_label(productForm.Brand,'marque :', {'label.attr': {'class':'label'}})}}
+    {{form_widget(productForm.Brand, { 'att' : {'placeholder' : 'marque '}})}}
+
+    {{form_widget(productForm.submit, { 'att' : {'label' : 'Enregistrer'}})}}
+
+    {{ form_end(productForm) }}
+
+</body>
+</html>

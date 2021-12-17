@@ -1,0 +1,25 @@
+{% extends "front/base.html.twig" %}
+
+
+{% block main %}
+{{batman}}
+<hr>
+
+	{% for brand in brands %}
+		<h2>{{brand.name}}</h2>
+	{% endfor %}
+
+	{% for gproduct in gproducts.getAll %}
+		<h3>{{gproduct.name}}</h3>
+	{% endfor %}
+
+	
+	{% for gbrand in gbrands.getAll %}
+		<h3>{{gbrand.name}}</h3>
+	{% endfor %}
+
+	{% for gtype in gtypes.getAll %}
+		<h3>{{gtype.name}}</h3>
+	{% endfor %}
+
+{% endblock %}
